@@ -15,7 +15,7 @@ node {
     } else {
         bat './gradlew.bat test'
     }
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/test-results/TEST-*.xml'])
+    step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/TEST-*.xml'])
 
     stage: 'postbuild'
     if (isUnix()) {
