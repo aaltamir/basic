@@ -4,9 +4,9 @@ node {
 
     stage 'build'
     if (isUnix()) {
-        sh './gradlew clean build'
+        sh './gradlew clean createDockerfile'
     } else {
-        bat './gradlew.bat clean build'
+        bat './gradlew.bat clean createDockerfile'
     }
 
     stage 'test'
